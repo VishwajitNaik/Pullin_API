@@ -11,7 +11,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 8000;
 
-// using bodyParser
+//  body-parser is used to parse incoming request bodies in a middleware before the handlers, 
+// which allows developers to easily access the body of the HTTP request. 
 app.use(
   bodyParser.urlencoded({
     extended: false,
