@@ -28,7 +28,7 @@ module.exports.createQuestion = async function (req, res) {
 module.exports.deleteQuestion = async function (req, res) {
   try {
     // finding the particular Question
-    const question = await Questions.findById(req.params.id);
+    const question = await Questions.findById(req.params._id);
     console.log(req.params.id);
     // deleting all the options related to that question
     for (let id of question.options) {
